@@ -17,7 +17,7 @@ def calchour(chour):
 	if chour>12:
 		chour=chour-12
 	return chour
-while count<6:
+while count<2:
 	im = Image.new('RGBA', (320, 320), (0, 0, 0, 0)) 
 	draw = ImageDraw.Draw(im) 
 	a0=0
@@ -51,6 +51,7 @@ while count<6:
 	#draw.point((p1['x']+200,p1['y']+200),fill="rgb(255,0,0)")
 	draw.point((origin),fill="rgb(0,0,255)")
 	im.show()
-	sleep(60)
+	break	
+	#sleep(60)
 	count=count+1
 
