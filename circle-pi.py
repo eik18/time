@@ -8,7 +8,7 @@ matrix = Adafruit_RGBmatrix(16, 1)
 image = Image.new('1', (32, 16))
 draw = ImageDraw.Draw(image)
 
-r0=7
+r0=8
 originx=16
 originy=8
 origin=[originx,originy]
@@ -19,7 +19,7 @@ hrradius=4
 minradius=6
 def calcpoint(radius,angle):
 	angle=radians(angle)	
-	point=[radius*cos(angle),radius*sin(angle)]
+	point=[radius*cos(angle)+16,radius*sin(angle)+8]
 	return point
 
 a0=0
@@ -38,5 +38,6 @@ for p1 in minlist:
 
 matrix.Clear()
 matrix.SetImage(image.im.id,0,0)
-
+sleep(5)
+matrix.Clear()
 
