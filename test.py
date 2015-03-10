@@ -1,5 +1,12 @@
+
 from PIL import Image, ImageDraw
-im = Image.new('RGBA', (400, 400), (0, 0, 0, 0)) 
-draw = ImageDraw.Draw(im) 
-draw.ellipse((0,0, 150,300), fill=128)
-im.show()
+from rgbmatrix import Adafruit_RGBmatrix
+
+matrix = Adafruit_RGBmatrix(16, 1)
+image = Image.new('1', (32, 16))
+draw = ImageDraw.Draw(image)
+ 
+draw.ellipse((0,0, 8,8), fill=128)
+
+matrix.Clear()
+matrix.SetImage(image.im.id,0,0)
