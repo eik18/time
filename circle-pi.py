@@ -19,30 +19,21 @@ hrradius=4
 minradius=6
 def calcpoint(radius,angle):
 	angle=radians(angle)	
-	point=[radius*cos(angle)+originx,radius*sin(angle)+originy]
+	point=[radius*cos(angle),radius*sin(angle)]
 
 a0=0
 while a0<361:
 	#print "Angle is %d" % (a0)	
 	minlist.append(calcpoint(r0,a0))
 	a0=a0+6
-a0=0
-'''
-while a0<361:
-        #print "Angle is %d" % (a0)
-        hourlist.append(calcpoint(r0,a0))
-        a0=a0+30
-'''
+
+
 for p1 in minlist:
 	#print "x=%d, y=%d" % (p1[0], p1[1])
 	#draw.point((p1['x'],p1['y']),fill="rgb(255,0,0)")
 	draw.point((p1[0],p1[1]),fill="rgb(255,0,0)")
 	#draw.line((origin[0],origin[1],p1[0],p1[1]),fill="rgb(255,0,0)")
-'''
-for p1 in hourlist:
-        #print "x=%d, y=%d" % (p1[0], p1[1])
-        draw.point((p1[0],p1[1]),fill="rgb(0,255,0)")
-'''
+
 
 matrix.Clear()
 matrix.SetImage(image.im.id,0,0)
