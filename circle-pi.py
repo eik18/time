@@ -23,13 +23,13 @@ def calcpoint(radius,angle):
 
 a0=0
 while a0<361:
-	#print "Angle is %d" % (a0)	
+	print "Angle is %d" % (a0)	
 	minlist.append(calcpoint(r0,a0))
 	a0=a0+6
 
 
 for p1 in minlist:
-	#print "x=%d, y=%d" % (p1[0], p1[1])
+	print "x=%d, y=%d" % (p1[0], p1[1])
 	#draw.point((p1['x'],p1['y']),fill="rgb(255,0,0)")
 	draw.point((p1[0],p1[1]),fill="rgb(255,0,0)")
 	#draw.line((origin[0],origin[1],p1[0],p1[1]),fill="rgb(255,0,0)")
