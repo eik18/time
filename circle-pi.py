@@ -20,6 +20,7 @@ minradius=6
 def calcpoint(radius,angle):
 	angle=radians(angle)	
 	point=[radius*cos(angle),radius*sin(angle)]
+	return point
 
 a0=0
 while a0<361:
