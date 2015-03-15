@@ -25,40 +25,20 @@ def calchour(chour):
 		chour=chour-12
 	return chour
 a0=6
-while a0<359:
-	print "Angle is %d" % (a0)	
-	minlist.append(calcpoint(r0,a0))
-	a0=a0+6
-a0=30
-while a0<359:
-	        #print "Angle is %d" % (a0)
-	        hourlist.append(calcpoint(r0,a0))
-	        a0=a0+30
 
-#for p1 in minlist:
-#	print "x=%d, y=%d" % (p1[0], p1[1])
-	#draw.point((p1['x'],p1['y']),fill="rgb(255,0,0)")
-#	draw.point((p1[0],p1[1]),fill="rgb(255,0,0)")
-	#draw.line((origin[0],origin[1],p1[0],p1[1]),fill="rgb(255,0,0)"
-
-#for p1 in hourlist:
-#	print "x=%d, y=%d" % (p1[0], p1[1])
-	#draw.point((p1['x'],p1['y']),fill="rgb(255,0,0)")
-#	draw.point((p1[0],p1[1]),fill="rgb(0,0,255)")
-	#draw.line((origin[0],origin[1],p1[0],p1[1]),fill="rgb(255,0,0)"
 
 now=datetime.now()
+#nowmin=now.minute
 
-min0=calcpoint(minradius,6*now.minute-90)
-draw.line((originx,originy,min0[0],min0[1]),fill="rgb(255,0,0)")
+for nowmin in range(0,59):
+	matrix.Clear()
+	draw.point((origin),fill="rgb(0,0,255)")
+	draw.rectangle((7,0, 23,14), outline=128)
+	min0=calcpoint(minradius,6*nowmin-90)
+	draw.line((originx,originy,min0[0],min0[1]),fill="rgb(255,0,0)")
+	matrix.SetImage(image.im.id,0,0)
+	sleep (1)
 
-draw.point((origin),fill="rgb(0,0,255)")
-draw.rectangle((7,0, 23,14), outline=128)
-#draw.point((15,7),fill='rgb(0,0,255)')
-
-
-
-matrix.SetImage(image.im.id,0,0)
-sleep (10)
+sleep (5)
 matrix.Clear()
 
