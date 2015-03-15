@@ -11,7 +11,9 @@ draw = ImageDraw.Draw(image)
 r0=8
 originx=16
 originy=8
+origin=[originx,originy]
 hourlist=[]
+minradius=6
 minlist=[]
 matrix.Clear()
 def calcpoint(radius,angle):
