@@ -6,8 +6,8 @@ matrix = Adafruit_RGBmatrix(16, 1)
 image = Image.new('RGB', (32, 16))
 draw = ImageDraw.Draw(image)
  
-draw.ellipse((5,5, 16,16), outline=128)
-
+draw.rectangle((7,0, 23,14), outline=128)
+draw.point((15,7),fill='rgb(0,0,255)')
 
 
 matrix.Clear()
