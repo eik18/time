@@ -4,9 +4,9 @@ from rgbmatrix import Adafruit_RGBmatrix
 
 matrix = Adafruit_RGBmatrix(16, 1)
 image = Image.new('RGB', (32, 16))
-#draw = ImageDraw.Draw(image)
-font=ImageFont.truetype("Ubuntu-r.ttf",10)
-draw.text((10,10),"Test", font=font)
+draw = ImageDraw.Draw(image)
+font=ImageFont.truetype("Ubuntu-R.ttf",14)
+draw.text((0,0),"Test", font=font)
 matrix.SetImage(image.im.id,0,0)
 '''
 x=0
