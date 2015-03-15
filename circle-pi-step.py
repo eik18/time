@@ -25,16 +25,26 @@ def calchour(chour):
 		chour=chour-12
 	return chour
 a0=6
-while a0<361:
+while a0<359:
 	print "Angle is %d" % (a0)	
 	minlist.append(calcpoint(r0,a0))
 	a0=a0+6
-
+a0=30
+while a0<359:
+	        #print "Angle is %d" % (a0)
+	        hourlist.append(calcpoint(r0,a0))
+	        a0=a0+30
 
 for p1 in minlist:
 	print "x=%d, y=%d" % (p1[0], p1[1])
 	#draw.point((p1['x'],p1['y']),fill="rgb(255,0,0)")
 	draw.point((p1[0],p1[1]),fill="rgb(255,0,0)")
+	#draw.line((origin[0],origin[1],p1[0],p1[1]),fill="rgb(255,0,0)"
+
+for p1 in hourlist:
+	print "x=%d, y=%d" % (p1[0], p1[1])
+	#draw.point((p1['x'],p1['y']),fill="rgb(255,0,0)")
+	draw.point((p1[0],p1[1]),fill="rgb(0,0,255)")
 	#draw.line((origin[0],origin[1],p1[0],p1[1]),fill="rgb(255,0,0)"
 
 now=datetime.now()
