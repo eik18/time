@@ -8,14 +8,12 @@ draw = ImageDraw.Draw(image)
 font=ImageFont.truetype("Ubuntu-R.ttf",14)
 draw.text((0,0),"Test", font=font)
 matrix.SetImage(image.im.id,0,0)
-'''
-x=0
-while x<32:
-	matrix.Clear()
-	#draw.line((x,0,x,15),fill="rgb(255,0,0)")
-	matrix.SetImage(image.im.id,x,0)
-	sleep (1)
-	x=x+1
-'''
-sleep (5)
+sleep (2)
+matrix.Clear()
+draw.text((0,0),"Eric", font=font)
+matrix.SetImage(image.im.id,0,0)
+
+
+
+sleep (22)
 matrix.Clear()

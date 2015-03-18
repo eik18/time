@@ -24,6 +24,8 @@ def calcpoint(radius,angle):
 
 for nowmin in range(0,59):
 	matrix.Clear()
+	image = Image.new('RGB', (32, 16))
+	draw = ImageDraw.Draw(image)
 	draw.rectangle((7,0, 23,14), outline=128)
 	min0=calcpoint(minradius,6*nowmin-90)
 	draw.line((originx,originy,min0[0],min0[1]),fill="rgb(255,0,0)")
