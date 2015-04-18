@@ -11,6 +11,7 @@ matrix.SetImage(image.im.id,0,0)
 sleep (2)
 matrix.Clear()
 image = Image.new('RGB', (32, 16))
+font=ImageFont.truetype("Ubuntu-R.ttf",14)
 draw.text((0,0),"Eric", font=font)
 matrix.SetImage(image.im.id,0,0)
 
