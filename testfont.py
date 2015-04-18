@@ -10,6 +10,7 @@ draw.text((0,0),"Test", font=font)
 matrix.SetImage(image.im.id,0,0)
 sleep (2)
 matrix.Clear()
+image = Image.new('RGB', (32, 16))
 draw.text((0,0),"Eric", font=font)
 matrix.SetImage(image.im.id,0,0)
 
